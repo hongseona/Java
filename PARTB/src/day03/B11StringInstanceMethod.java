@@ -22,9 +22,9 @@ public class B11StringInstanceMethod {
         System.out.println(message.charAt(4));                              // (특정 위치의 문자 하나를 반환)
         System.out.println(message.toUpperCase());                                // String(문자열의 모든 소문자를 대문자로 변환해줌)
         System.out.println(message.indexOf("java"));                            // int(자바 문자/문자열이 시작되는 위치를 찾아줌)
-        System.out.println(message.startsWith("hello"));                    // boolean()
-        System.out.println(message.endsWith("java"));                       // boolean
-        System.out.println(message.replace("","*"));            // String(교체)
+        System.out.println(message.startsWith("hello"));                    // boolean(문자열이 특정 문자열로 시작하는지 확인해줌)
+        System.out.println(message.endsWith("java"));                       // boolean(문자열이 특정 문자열로 끝나는지 확인해줌)
+        System.out.println(message.replace("","*"));            // String(문자열 안의 문자 또는 문자열을 교체)
         System.out.println(message.substring(1,4));             // String(중간에서 추출.마지막 인덱스는 포함되지 않음)
         System.out.println(message.substring(3));                       // String(3번부터 끝까지 추출)
         System.out.println(message.lastIndexOf(""));                            // int(마지막 공백의 위치)
