@@ -22,13 +22,14 @@ public class C14MyFunctionalInterface {
             public int testc(int a,int b) {
                 // a =11;
                 // b =22;
+                return a*b;
             }
         };
         ITestC tc2 = (a,b) -> a*b;  // return a*b; 명령 1개일 때는 return 생략 가능  
         int result = tc2.testc(11, 34);
         System.out.println("testc 실행 결과: "+result);
 
-        ITestC tC3 = (a,b) -> {
+        ITestC tc3 = (a,b) -> {
             a+=11;
             b+=22;
             return a*b;
