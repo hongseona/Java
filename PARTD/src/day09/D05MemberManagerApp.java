@@ -11,7 +11,8 @@ public class D05MemberManagerApp {
         initMemberList(list);   // list 변수 참조값 전달
         System.out.println("회원 관리 프로그램입니다.");
         boolean status = true;
-        while (status) {
+        while (status) {  // status: 반복실행을 제어하는 boolean 변수. 계속 실행할지 종료할지 결정하는 스위치 역할
+          // while: 조건이 참인 동안 반복해서 코드 블록을 실행하게 하는 제어문
           System.out.println("\n작업 메뉴를 선택하세요.");
           System.out.println("[A] 회원 추가  [R] 회원 삭제   [U] 회원 포인트 변경" +
             "\n[S] 회원 목록   [N] 이름 조회   [E] 종료");
@@ -27,8 +28,10 @@ public class D05MemberManagerApp {
               for(int i=0; i <list.size(); i++){
                 if(list.get(i).getName().contains(find)){   // 순서대로 인덱스 i의 데이터를 가져와서 gettet 이름 값이 contains(find)
                     System.out.println("\t"+i+": "+ list.get(i));
+                    // contains(): 어떤 값이 String(문자열),Set/List등 (컬렉션) 안에 포함되어 있는지를 boolean값으로 검사하는 메서드
                 }
               }  
+              break;
             case "R":
                 int index = Integer.parseInt(
                   System.console().readLine("삭제할 인덱스 입력 >>>>"));
@@ -45,7 +48,7 @@ public class D05MemberManagerApp {
                 double point = Double.parseDouble(System.console().readLine("\t포인트 입력"));
                 if(confirm("포인트 변경")) {
                     list.get(index).setPoint(point);
-                    // ✅ index 의 객체를 가져와서 (Member타입) setter호 point 값 변경
+                    // ✅ index 의 객체를 가져와서 (Member타입) setter로 point 값 변경
                     System.out.println("\t업데이트 결과: " + list.get(index));
                 }else{
                         
